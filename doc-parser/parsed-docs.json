@@ -1,0 +1,858 @@
+{
+	"docs": [
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description Sets account types\n   * @param     {object} user           - The requesting user\n   * @param     {FetchOption} options   - Request object\n   * @returns   {FetchResult}           - List of contacts\n   */",
+			"meta": {
+				"range": [
+					411,
+					804
+				],
+				"filename": "setAccountTypes.js",
+				"lineno": 12,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/AccountTypes",
+				"code": {
+					"id": "astnode100000073",
+					"name": "setAccountTypes",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"type": "Interactors.setAccountTypes~type"
+				},
+				"route": "POST account/:entity/:field",
+				"entity_name": "AccountTypes",
+				"interactor_name": "setAccountTypes"
+			},
+			"memberof": "Interactors",
+			"description": "Sets account types",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"object"
+						]
+					},
+					"description": "The requesting user",
+					"name": "user"
+				},
+				{
+					"type": {
+						"names": [
+							"FetchOption"
+						]
+					},
+					"description": "Request object",
+					"name": "options"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"FetchResult"
+						]
+					},
+					"description": "- List of contacts"
+				}
+			],
+			"name": "setAccountTypes",
+			"longname": "Interactors.setAccountTypes",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R000014",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Deletes a client from the system\n   * @param {Object} props - The properties of the client being deleted.\n   *    @param {String} props._id - [ required ] The id of the client being deleted\n   * @param {Object} current_user - The current user making the request\n   * @return {DeleteResponse} - Documented in types/index.js\n   */",
+			"meta": {
+				"range": [
+					640,
+					1759
+				],
+				"filename": "deleteClient.js",
+				"lineno": 15,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Clients",
+				"code": {
+					"id": "astnode100001770",
+					"name": "deleteClient",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"fetch_options": "Interactors.deleteClient~fetch_options",
+					"deleteClient.canSubscribe": "Interactors.deleteClient.canSubscribe",
+					"": null
+				},
+				"route": "DELETE client/:_id",
+				"entity_name": "Clients",
+				"interactor_name": "deleteClient"
+			},
+			"memberof": "Interactors",
+			"description": "- Deletes a client from the system",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "The properties of the client being deleted.",
+					"name": "props"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "[ required ] The id of the client being deleted",
+					"name": "props._id"
+				},
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "The current user making the request",
+					"name": "current_user"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"DeleteResponse"
+						]
+					},
+					"description": "- Documented in types/index.js"
+				}
+			],
+			"name": "deleteClient",
+			"longname": "Interactors.deleteClient",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R000246",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Fetches a client, or group of clients from the system\n   * @param {FetchOption} options - Documented in types/index.js\n   * @param {User} current_user - The current user making the request to fetch users.\n   * @return {FetchResult} - Documented in types/index.js\n   */",
+			"meta": {
+				"range": [
+					387,
+					517
+				],
+				"filename": "fetchClients.js",
+				"lineno": 10,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Clients",
+				"code": {
+					"id": "astnode100001875",
+					"name": "fetchClients",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null
+				},
+				"route": "POST client/find",
+				"entity_name": "Clients",
+				"interactor_name": "fetchClients"
+			},
+			"memberof": "Interactors",
+			"description": "- Fetches a client, or group of clients from the system",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"FetchOption"
+						]
+					},
+					"description": "Documented in types/index.js",
+					"name": "options"
+				},
+				{
+					"type": {
+						"names": [
+							"User"
+						]
+					},
+					"description": "The current user making the request to fetch users.",
+					"name": "current_user"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"FetchResult"
+						]
+					},
+					"description": "- Documented in types/index.js"
+				}
+			],
+			"name": "fetchClients",
+			"longname": "Interactors.fetchClients",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R000260",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Updates a client.\n   * @param {Object} props - In addition to the listed properties, any client custom fields created in the current_user's\n   *  account can be passed in as client properties\n   *    @param {String} props.name\n   *    @param {Object} props.address\n   *    @param {String} props.phone\n   *    @param {String} props.email\n   *    @param {String} props.notes\n   * @param {Object} current_user - The current user making the request\n   * @return {Object} - Updated client object\n   */",
+			"meta": {
+				"range": [
+					696,
+					1410
+				],
+				"filename": "updateClient.js",
+				"lineno": 18,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Clients",
+				"code": {
+					"id": "astnode100002989",
+					"name": "updateClient",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"current_client": "Interactors.updateClient~current_client",
+					"": null,
+					"updated_client": "Interactors.updateClient~updated_client"
+				},
+				"route": "PUT client/:_id",
+				"entity_name": "Clients",
+				"interactor_name": "updateClient"
+			},
+			"memberof": "Interactors",
+			"description": "- Updates a client.",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "In addition to the listed properties, any client custom fields created in the current_user's\n account can be passed in as client properties",
+					"name": "props"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"name": "props.name"
+				},
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"name": "props.address"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"name": "props.phone"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"name": "props.email"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"name": "props.notes"
+				},
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "The current user making the request",
+					"name": "current_user"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "- Updated client object"
+				}
+			],
+			"name": "updateClient",
+			"longname": "Interactors.updateClient",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R000402",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Creates a new plan in the HT and Stripe systems\n   * @param {Object} props\n   *     @param {String} props.name - The name of the new plans\n   *     @param {String} props.description - The description of the new plans\n   *     @param {String} props.type - Must be one of : 'map_city' | 'map_state' | 'map_national' | 'crm' | 'data' | 'canvassing's\n   *     @param {String} props.currency - The currency of the plan; defaults to 'usd's\n   *     @param {Number} props.amount - The amount (in cents) of the plans\n   *     @param {Array<String>} props.permissions - The list of permissions emabled by the plans\n   *     @param {Array<PlanDiscount>} props.discounts - Documented in types/index.jss\n   * @param {User} current_user - The current user making the request\n   * @return {Object} - new Plan object\n   */",
+			"meta": {
+				"range": [
+					1218,
+					4032
+				],
+				"filename": "createPlan.js",
+				"lineno": 23,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Plans",
+				"code": {
+					"id": "astnode100011442",
+					"name": "createPlan",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"plan_with_name": "Interactors.createPlan~plan_with_name",
+					"": null,
+					"invalid_permission": "Interactors.createPlan~invalid_permission",
+					"props.created_by": "props.created_by",
+					"saved_plan": "Interactors.createPlan~saved_plan",
+					"statement_descriptor": "Interactors.createPlan~statement_descriptor",
+					"stripe_plan_props": "Interactors.createPlan~stripe_plan_props"
+				},
+				"route": "POST plans/create",
+				"entity_name": "Plans",
+				"interactor_name": "createPlan"
+			},
+			"memberof": "Interactors",
+			"description": "- Creates a new plan in the HT and Stripe systems",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"name": "props"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "The name of the new plans",
+					"name": "props.name"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "The description of the new plans",
+					"name": "props.description"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "Must be one of : 'map_city' | 'map_state' | 'map_national' | 'crm' | 'data' | 'canvassing's",
+					"name": "props.type"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "The currency of the plan; defaults to 'usd's",
+					"name": "props.currency"
+				},
+				{
+					"type": {
+						"names": [
+							"Number"
+						]
+					},
+					"description": "The amount (in cents) of the plans",
+					"name": "props.amount"
+				},
+				{
+					"type": {
+						"names": [
+							"Array.<String>"
+						]
+					},
+					"description": "The list of permissions emabled by the plans",
+					"name": "props.permissions"
+				},
+				{
+					"type": {
+						"names": [
+							"Array.<PlanDiscount>"
+						]
+					},
+					"description": "Documented in types/index.jss",
+					"name": "props.discounts"
+				},
+				{
+					"type": {
+						"names": [
+							"User"
+						]
+					},
+					"description": "The current user making the request",
+					"name": "current_user"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "- new Plan object"
+				}
+			],
+			"name": "createPlan",
+			"longname": "Interactors.createPlan",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R001463",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Deletes a Plan from the Hail Trace system, and from the Stripe system\n   * @param {Object} props\n   *    @param {String} params._id - [ required ] The id of the plan being deleted\n   * @param {User} current_user - The current user making the request\n   * @return {DeleteResponse} - Documented in types/index.js\n   */",
+			"meta": {
+				"range": [
+					703,
+					1473
+				],
+				"filename": "deletePlan.js",
+				"lineno": 17,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Plans",
+				"code": {
+					"id": "astnode100011819",
+					"name": "deletePlan",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"current_plan": "Interactors.deletePlan~current_plan",
+					"subscription_with_plan": "Interactors.deletePlan~subscription_with_plan"
+				},
+				"route": "DELETE plans/:_id",
+				"entity_name": "Plans",
+				"interactor_name": "deletePlan"
+			},
+			"memberof": "Interactors",
+			"description": "- Deletes a Plan from the Hail Trace system, and from the Stripe system",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"name": "props"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "[ required ] The id of the plan being deleted",
+					"name": "params._id"
+				},
+				{
+					"type": {
+						"names": [
+							"User"
+						]
+					},
+					"description": "The current user making the request",
+					"name": "current_user"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"DeleteResponse"
+						]
+					},
+					"description": "- Documented in types/index.js"
+				}
+			],
+			"name": "deletePlan",
+			"longname": "Interactors.deletePlan",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R001507",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Updates an existing Plan in the HT system, and in the Stripe system\n   * @param {Object} props\n   *     @param {String} props._id [ required ] The id of the plan being updated\n   *     @param {String} props.name - The name of the new plan\n   *     @param {String} props.description - The description of the new plan\n   *     @param {String} props.type - Must be one of : 'map_city' | 'map_state' | 'map_national' | 'crm' | 'data' | 'canvassing'\n   *     @param {String} props.currency - The currency of the plan; defaults to 'usd'\n   *     @param {Number} props.amount - The amount (in cents) of the plan\n   *     @param {Array<String>} props.permissions - The list of permissions emabled by the plan\n   *     @param {Array<PlanDiscount>} props.discounts - Documented in types/index.js\n   * @param {User} current_user - The current user making the request\n   * @return {Object} - The updated plan object\n   */",
+			"meta": {
+				"range": [
+					1253,
+					3045
+				],
+				"filename": "updatePlan.js",
+				"lineno": 23,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Plans",
+				"code": {
+					"id": "astnode100011969",
+					"name": "updatePlan",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"current_plan": "Interactors.updatePlan~current_plan",
+					"plan_with_name": "Interactors.updatePlan~plan_with_name",
+					"current_plan.name": "Interactors.updatePlan~current_plan.name",
+					"current_plan.description": "Interactors.updatePlan~current_plan.description",
+					"invalid_permission": "Interactors.updatePlan~invalid_permission",
+					"": null,
+					"current_plan.permissions": "Interactors.updatePlan~current_plan.permissions",
+					"current_plan.discounts": "Interactors.updatePlan~current_plan.discounts",
+					"updated_plan": "Interactors.updatePlan~updated_plan"
+				},
+				"route": "PUT plans/update",
+				"entity_name": "Plans",
+				"interactor_name": "updatePlan"
+			},
+			"memberof": "Interactors",
+			"description": "- Updates an existing Plan in the HT system, and in the Stripe system",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"name": "props"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "[ required ] The id of the plan being updated",
+					"name": "props._id"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "The name of the new plan",
+					"name": "props.name"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "The description of the new plan",
+					"name": "props.description"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "Must be one of : 'map_city' | 'map_state' | 'map_national' | 'crm' | 'data' | 'canvassing'",
+					"name": "props.type"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "The currency of the plan; defaults to 'usd'",
+					"name": "props.currency"
+				},
+				{
+					"type": {
+						"names": [
+							"Number"
+						]
+					},
+					"description": "The amount (in cents) of the plan",
+					"name": "props.amount"
+				},
+				{
+					"type": {
+						"names": [
+							"Array.<String>"
+						]
+					},
+					"description": "The list of permissions emabled by the plan",
+					"name": "props.permissions"
+				},
+				{
+					"type": {
+						"names": [
+							"Array.<PlanDiscount>"
+						]
+					},
+					"description": "Documented in types/index.js",
+					"name": "props.discounts"
+				},
+				{
+					"type": {
+						"names": [
+							"User"
+						]
+					},
+					"description": "The current user making the request",
+					"name": "current_user"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "- The updated plan object"
+				}
+			],
+			"name": "updatePlan",
+			"longname": "Interactors.updatePlan",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R001523",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Ends a user's session\n   * @param {Object} props - Object containing the users token\n   * @prop {String} props.token - The token of session that is being ended\n   * @param {User} current_user - The current user making the request\n   * @return {Object} - Success message\n   */",
+			"meta": {
+				"range": [
+					431,
+					729
+				],
+				"filename": "signOutUser.js",
+				"lineno": 12,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Users",
+				"code": {
+					"id": "astnode100019194",
+					"name": "signOutUser",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"current_user.tokens": "current_user.tokens",
+					"": null
+				},
+				"route": "POST signout",
+				"entity_name": "Users",
+				"interactor_name": "signOutUser"
+			},
+			"memberof": "Interactors",
+			"description": "- Ends a user's session",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "Object containing the users token",
+					"name": "props"
+				},
+				{
+					"type": {
+						"names": [
+							"User"
+						]
+					},
+					"description": "The current user making the request",
+					"name": "current_user"
+				}
+			],
+			"properties": [
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "The token of session that is being ended",
+					"name": "props.token"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"description": "- Success message"
+				}
+			],
+			"name": "signOutUser",
+			"longname": "Interactors.signOutUser",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R002303",
+			"___s": true
+		},
+		{
+			"comment": "/**\n   * @memberof Interactors\n   * @description - Checks for valid input and stores a new user in the system.\n   * @param {Object} props\n   * @param {Object} props.name\n   * @param {String} props.name.first\n   * @param {String} props.name.last,\n   * @param {String} props.email [ required ]\n   * @param {String} props.password [ required ]\n   * @param {String} props.password_confirm [ required ]\n   * @param {Boolean} props.agree_terms [ required ]\n   * @return {User} - A new User instance populated with salt and hash.\n   */",
+			"meta": {
+				"range": [
+					732,
+					2777
+				],
+				"filename": "signupUser.js",
+				"lineno": 20,
+				"columnno": 8,
+				"path": "/Users/daviddionise/core.hailtrace.com/src/interactors/Users",
+				"code": {
+					"id": "astnode100019274",
+					"name": "signupUser",
+					"type": "FunctionExpression"
+				},
+				"vars": {
+					"undefined": null,
+					"user_with_email": "Interactors.signupUser~user_with_email",
+					"fetch_role_filters": "Interactors.signupUser~fetch_role_filters",
+					"client_admin_role": "Interactors.signupUser~client_admin_role",
+					"updated_user_props": "Interactors.signupUser~updated_user_props",
+					"new_user": "Interactors.signupUser~new_user",
+					"new_user_role_props": "Interactors.signupUser~new_user_role_props",
+					"new_sales_role_props": "Interactors.signupUser~new_sales_role_props",
+					"new_company": "Interactors.signupUser~new_company",
+					"new_user.company": "Interactors.signupUser~new_user.company"
+				},
+				"route": "POST signup",
+				"entity_name": "Users",
+				"interactor_name": "signupUser"
+			},
+			"memberof": "Interactors",
+			"description": "- Checks for valid input and stores a new user in the system.",
+			"params": [
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"name": "props"
+				},
+				{
+					"type": {
+						"names": [
+							"Object"
+						]
+					},
+					"name": "props.name"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"name": "props.name.first"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"name": "props.name.last,"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "[ required ]",
+					"name": "props.email"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "[ required ]",
+					"name": "props.password"
+				},
+				{
+					"type": {
+						"names": [
+							"String"
+						]
+					},
+					"description": "[ required ]",
+					"name": "props.password_confirm"
+				},
+				{
+					"type": {
+						"names": [
+							"Boolean"
+						]
+					},
+					"description": "[ required ]",
+					"name": "props.agree_terms"
+				}
+			],
+			"returns": [
+				{
+					"type": {
+						"names": [
+							"User"
+						]
+					},
+					"description": "- A new User instance populated with salt and hash."
+				}
+			],
+			"name": "signupUser",
+			"longname": "Interactors.signupUser",
+			"kind": "function",
+			"scope": "static",
+			"async": true,
+			"___id": "T000002R002311",
+			"___s": true
+		}
+	]
+}
